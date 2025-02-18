@@ -14,7 +14,7 @@ Minishell is a simplified shell project developed at 42 Berlin. The goal is to c
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Rufussed/minishell.git
+   git clone https://github.com/emily-cloud/42-minishell.git
    cd minishell
    ```
 2. Compile the project:
@@ -61,5 +61,5 @@ Minishell is a simplified shell project developed at 42 Berlin. The goal is to c
 - `Makefile` - Compilation rules.
 
 ## Authors
-Developed as part of 42 Berlin's curriculum by [Huayun Ai  / Rufus ].
+Developed as part of 42 Berlin's curriculum by [Huayun Ai  / Rufussed ].
 
