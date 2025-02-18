@@ -1,64 +1,54 @@
 # Minishell - 42 Berlin
 
 ## Introduction
-Minishell is a simplified shell project developed at 42 Berlin. The goal is to create a basic command-line interpreter that mimics the behavior of Bash, handling user input, executing commands, managing processes, and handling redirections and pipelines. This project helps deepen understanding of system calls, process management, and file descriptors in Unix-based operating systems.
+Minishell is a student project at 42 Berlin that aims to create a simple shell program similar to Bash. It allows users to execute commands, handle input/output redirections, and manage processes. This project helps students understand Unix processes, system calls, and file descriptors.
 
 ## Features
-- Command execution (similar to Bash)
-- Handling of built-in commands (e.g., `echo`, `cd`, `pwd`, `export`, `unset`, `env`, `exit`)
-- Support for pipes (`|`) and redirections (`>`, `>>`, `<`)
-- Environment variable management
-- Signal handling (`Ctrl+C`, `Ctrl+D`, `Ctrl+\`)
-- Proper error handling and memory management
+### Mandatory
+- Command execution using `fork`, `execve`, `waitpid`, `pipe`, etc.
+- Basic built-in commands: `echo`, `cd`, `pwd`, `export`, `unset`, `env`, `exit`.
+- Input/output redirections: `>`, `>>`, `<`.
+- Pipes (`|`) for command chaining.
+- Environment variable management.
+- Handling of signals (`CTRL+C`, `CTRL+D`, `CTRL+\`).
+- Error handling and proper memory management.
+
+### Bonus Features
+- Support for `&&` and `||` logical operators.
+- Wildcard expansion (`*` matching files in directories).
+- Advanced redirections and file descriptor handling.
+- More built-in commands for an enhanced shell experience.
+- `heredoc` (`<<`) implementation.
+- Improved signal handling and job control.
 
 ## Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/emily-cloud/42-minishell.git
-   cd minishell
-   ```
-2. Compile the project:
-   ```sh
-   make
-   ```
-3. Run Minishell:
-   ```sh
-   ./minishell
-   ```
+```bash
+git clone  git clone https://github.com/emily-cloud/42-minishell.git
+cd minishell
+make
+```
 
-## Built-in Commands
-- `echo` - Prints arguments to the terminal.
-- `cd` - Changes the current working directory.
-- `pwd` - Prints the current directory.
-- `export` - Sets environment variables.
-- `unset` - Unsets environment variables.
-- `env` - Prints the environment variables.
-- `exit` - Exits the shell.
+## Usage
+```bash
+./minishell
+```
+- Run commands just like in Bash.
+- Use built-in commands for directory and environment management.
 
-## Usage Examples
-- Running a simple command:
-  ```sh
-  ls -la
-  ```
-- Using pipes:
-  ```sh
-  ls | grep minishell
-  ```
-- Redirection:
-  ```sh
-  echo "Hello" > file.txt
-  cat < file.txt
-  ```
+## Authors
+- Developed as part of the 42 Berlin curriculum.
 
-## Signals Handling
-- `Ctrl+C` - Interrupts the current process.
-- `Ctrl+D` - Exits the shell.
-- `Ctrl+\` - Quits the process.
+## Resources
+- `man 3 readline`
+- `man 2 fork`
+- `man 2 execve`
+- `man 2 pipe`
+- `man 2 dup2`
+- `man 2 waitpid`
+- `man 2 signal`
 
-## Code Structure
-- `src/` - Contains the main source code.
-- `includes/` - Header files.
-- `Makefile` - Compilation rules.
+## License
+This project is part of the 42 curriculum and follows its academic guidelines.
 
 ## Authors
 Developed as part of 42 Berlin's curriculum by [Huayun Ai  / Rufussed ].
