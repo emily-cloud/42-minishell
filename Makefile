@@ -16,8 +16,9 @@ LIBFT = $(LIBFT_DIR)/libft.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-INCLUDES = -I$(SRC_DIR) -I$(LIBFT_DIR)
-LDFLAGS = -lreadline
+READLINE_DIR = /opt/homebrew/opt/readline
+INCLUDES = -I$(SRC_DIR) -I$(LIBFT_DIR) -I$(READLINE_DIR)/include
+LDFLAGS = -L$(READLINE_DIR)/lib -lreadline
 
 # Colors
 RED = \033[0;31m

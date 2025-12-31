@@ -58,6 +58,7 @@ int	main(int argc, char **argv, char **envp)
 	input_loop(shell);
 	free_shell(shell);
 	rl_clear_history();
+	//clear_history();
 	printf("exit\n");
 	return (0);
 }
