@@ -1,44 +1,156 @@
-# Minishell - 42 Berlin
+# 🐚 Minishell – 42 Berlin
 
-## Introduction
-Minishell is a student project at 42 Berlin that aims to create a simple shell program similar to Bash. It allows users to execute commands, handle input/output redirections, and manage processes. This project helps students understand Unix processes, system calls, and file descriptors.
+Minishell is a student project from **42 Berlin** that recreates a simplified Unix shell.  
+It teaches core system programming concepts such as **process creation**, **pipes**, **redirections**, **signal handling**, and **environment variable management**.
 
-## Features
-### Mandatory
-- Command execution using `fork`, `execve`, `waitpid`, `pipe`, etc.
-- Basic built-in commands: `echo`, `cd`, `pwd`, `export`, `unset`, `env`, `exit`.
-- Input/output redirections: `>`, `>>`, `<`.
-- Pipes (`|`) for command chaining.
-- Environment variable management.
-- Handling of signals (`CTRL+C`, `CTRL+D`, `CTRL+\`).
-- Error handling and proper memory management.
+The goal is to implement essential shell behaviors described in the official subject, including command execution, quoting rules, PATH resolution, and built-in commands.
 
-### Bonus Features
-- Support for `&&` and `||` logical operators.
-- Wildcard expansion (`*` matching files in directories).
-- Advanced redirections and file descriptor handling.
-- More built-in commands for an enhanced shell experience.
-- `heredoc` (`<<`) implementation.
-- Improved signal handling and job control.
+---
 
-## Installation
+## 🌟 Features
+
+### ✅ Mandatory Features
+- Interactive **prompt**
+- Working **command history**
+- **Executable lookup** via `PATH`, absolute, or relative paths  
+- **Quotes**  
+  - `'single quotes'` preserve literal text  
+  - `"double quotes"` allow variable expansion  
+- **Environment variable expansion** (`$HOME`, `$USER`, `$?`, etc.)
+- **Redirections**  
+  - Input `<`  
+  - Output `>`  
+  - Append `>>`  
+  - `<<` **heredoc** (delimiter required)
+- **Pipes**: `cmd1 | cmd2 | cmd3`
+- **Signals**  
+  - `CTRL+C` → new prompt  
+  - `CTRL+D` → exit shell  
+  - `CTRL+\` → ignored
+- Built-in commands:
+  - `echo -n`
+  - `cd`
+  - `pwd`
+  - `export`
+  - `unset`
+  - `env`
+  - `exit`
+
+---
+
+## ✨ Bonus Features  
+(Only evaluated if mandatory is correct)
+
+- Logical operators: `&&` and `||`
+- Wildcard expansion: `*`
+- Enhanced redirections
+- Improved built-in robustness
+
+---
+
+## 🛠️ Installation
+
+### macOS Preparation
 ```bash
-git clone  git clone https://github.com/emily-cloud/42-minishell.git
-cd minishell
+brew install readline
+```
+
+Modify minishell.c:
+
+```c
+rl_clear_history();  // replace with clear_history() on mac
+```
+
+### Clone & Build
+```bash
+git clone https://github.com/emily-cloud/42-minishell.git
+cd 42-minishell
 make
 ```
 
-## Usage
+---
+
+## ▶️ Usage
+
+Start the shell:
+
 ```bash
 ./minishell
 ```
-- Run commands just like in Bash.
-- Use built-in commands for directory and environment management.
 
-## Authors
-- Developed as part of the 42 Berlin curriculum.
+You can now:
 
-## Resources
+- Execute commands (`ls`, `grep`, `cat`, `wc`, …)
+- Use pipes:
+  ```bash
+  ls -l | grep .c
+  ```
+- Use redirections:
+  ```bash
+  echo hello > out.txt
+  cat out.txt
+  hello
+  echo hey >> out.txt
+  cat out.txt
+  hello
+  hey
+  cat < out.txt
+  hello
+  hey
+  ```
+- Use heredocs:
+  ```bash
+  cat << EOF
+  hello
+  world
+  EOF
+  ```
+- Manage environment variables:
+  ```bash
+  export NAME=Emily
+  echo $NAME
+  ```
+- Pipes
+   ```bash
+  ls | grep c | wc -l
+       2
+  ls | grep c 
+  screenshot
+  src
+  ```
+
+- && ||
+  ```bash
+  ls && echo hello
+  libft           minishell       obj             README.md       src
+  Makefile        minishell_bonus out.txt         screenshot
+  hello
+  ls || echo hello
+  libft           minishell       obj             README.md       src
+  Makefile        minishell_bonus out.txt         screenshot
+  ``` 
+---
+
+## 🖼️ Screenshots
+
+### 💬 Running Minishell
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/emily-cloud/42-minishell/main/screenshot/Screenshot%202025-12-31%20at%2016.12.35.png" width="75%">
+</p>
+
+---
+
+### 📌 Pipes & Redirections Example
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/emily-cloud/42-minishell/main/screenshot/Screenshot%202025-12-31%20at%2016.12.54.png" width="75%">
+</p>
+
+---
+
+## 📚 Resources
+
 - `man 3 readline`
 - `man 2 fork`
 - `man 2 execve`
@@ -47,9 +159,18 @@ make
 - `man 2 waitpid`
 - `man 2 signal`
 
-## License
-This project is part of the 42 curriculum and follows its academic guidelines.
+---
 
-## Authors
-Developed as part of 42 Berlin's curriculum by [Huayun Ai  / Rufussed ].
+## 👥 Authors
+
+Developed for **42 Berlin** by:
+
+- **Huayun Ai**  
+- **Rufus Lane**
+
+---
+
+## 📄 License
+
+This project is part of the **42 School curriculum** and follows its academic guidelines.
 
