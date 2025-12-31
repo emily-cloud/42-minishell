@@ -58,7 +58,7 @@ brew install readline
 Modify minishell.c:
 
 ```c
-rl_clear_history();  // replace with clear_history() on mac
+rl_clear_history();  replace with clear_history() on mac
 ```
 
 ### Clone & Build
@@ -85,6 +85,11 @@ You can now:
   ```bash
   ls -l | grep .c
   ```
+  
+  <p align="center">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.30.42.png" width="75%">
+  </p>
+
 - Use redirections:
   ```bash
   echo hello > out.txt
@@ -98,6 +103,15 @@ You can now:
   hello
   hey
   ```
+
+  <p align="center">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.34.23.png" width="75%">
+  </p>
+  <p align="center">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.35.57.png" width="75%">
+  </p>
+
+
 - Use heredocs:
   ```bash
   cat << EOF
@@ -105,11 +119,21 @@ You can now:
   world
   EOF
   ```
+  
+  <p align="center">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.37.50.png" width="75%">
+  </p>
+
 - Manage environment variables:
   ```bash
   export NAME=Emily
   echo $NAME
   ```
+  
+  <p align="center">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.38.54.png" width="75%">
+  </p>
+
 - Pipes
    ```bash
   ls | grep c | wc -l
@@ -118,6 +142,10 @@ You can now:
   screenshot
   src
   ```
+
+  <p align="center">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.40.29.png" width="75%">
+  </p>
 
 - && ||
   ```bash
@@ -128,26 +156,12 @@ You can now:
   ls || echo hello
   libft           minishell       obj             README.md       src
   Makefile        minishell_bonus out.txt         screenshot
-  ``` 
----
+  ```
 
-## 🖼️ Screenshots
+  <p align="center">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.41.48.png" width="75%">
+  </p>
 
-### 💬 Running Minishell
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/emily-cloud/42-minishell/main/screenshot/Screenshot%202025-12-31%20at%2016.12.35.png" width="75%">
-</p>
-
----
-
-### 📌 Pipes & Redirections Example
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/emily-cloud/42-minishell/main/screenshot/Screenshot%202025-12-31%20at%2016.12.54.png" width="75%">
-</p>
-
----
 
 ## 📚 Resources
 
