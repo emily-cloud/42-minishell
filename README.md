@@ -39,7 +39,6 @@ The goal is to implement essential shell behaviors described in the official sub
 ---
 
 ## ✨ Bonus Features  
-(Only evaluated if mandatory is correct)
 
 - Logical operators: `&&` and `||`
 - Wildcard expansion: `*`
