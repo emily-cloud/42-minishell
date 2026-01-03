@@ -2,8 +2,8 @@
 
 Minishell is a student project from **42 Berlin** that recreates a simplified Unix shell.  
 It teaches core system programming concepts such as **process creation**, **pipes**, **redirections**, **signal handling**, and **environment variable management**.
+
 The goal is to faithfully implement essential shell behaviors as specified in the 42 Minishell subject, focusing on correctness, robustness, and memory safety.
----
 
 ## 🌟 Features
 
