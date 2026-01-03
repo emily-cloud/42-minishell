@@ -86,8 +86,8 @@ You can now:
   ls -l | grep .c
   ```
   
-  <p align="center">
-  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.30.42.png" width="75%">
+  <p align="left">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.30.42.png" width="40%">
   </p>
 
 - Use redirections:
@@ -104,11 +104,11 @@ You can now:
   hey
   ```
 
-  <p align="center">
-  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.34.23.png" width="75%">
+  <p align="left">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.34.23.png" width="40%">
   </p>
-  <p align="center">
-  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.35.57.png" width="75%">
+  <p align="left">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.35.57.png" width="40%">
   </p>
 
 
@@ -120,8 +120,8 @@ You can now:
   EOF
   ```
   
-  <p align="center">
-  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.37.50.png" width="75%">
+  <p align="left">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.37.50.png" width="40%">
   </p>
 
 - Manage environment variables:
@@ -130,8 +130,8 @@ You can now:
   echo $NAME
   ```
   
-  <p align="center">
-  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.38.54.png" width="75%">
+  <p align="left">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.38.54.png" width="40%">
   </p>
 
 - Pipes
@@ -143,8 +143,8 @@ You can now:
   src
   ```
 
-  <p align="center">
-  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.40.29.png" width="75%">
+  <p align="left">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.40.29.png" width="40%">
   </p>
 
 - && ||
@@ -158,8 +158,8 @@ You can now:
   Makefile        minishell_bonus out.txt         screenshot
   ```
 
-  <p align="center">
-  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.41.48.png" width="75%">
+  <p align="left">
+  <img src="https://github.com/emily-cloud/42-minishell/blob/main/screenshot/Screenshot%202025-12-31%20at%2016.41.48.png" width="40%">
   </p>
 
 
