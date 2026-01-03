@@ -44,8 +44,25 @@ The goal is to implement essential shell behaviors described in the official sub
 - Wildcard expansion: `*`
 - Enhanced redirections
 - Improved built-in robustness
+- Subshell
 
 ---
+
+## 🧠 Technical Constraints
+
+- Written in C
+- Follows the 42 Norm
+- No memory leaks (checked with Valgrind)
+- No forbidden functions
+
+
+## ⚠️ Limitations
+
+This shell is not a full Bash replacement.
+It follows the Minishell subject specifications and does not support:
+- Job control (fg, bg)
+- Advanced globbing
+
 
 ## 🛠️ Installation
 
